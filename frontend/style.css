@@ -1,0 +1,480 @@
+/*/um molho avassalador*/
+@import url(' https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap ');
+
+/*Tipografia - Rony*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap%27');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:black;
+    color:white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --ouro: #D4AF37;
+  --luz-dourada: #F5E5A8;
+  --dourado-escuro: #8A7025;
+  --branco: #FFFFFF;
+  --preto: #0D0D0D;
+  --cinza: #AAAAAA;
+  --linha: #373737;
+  --painel: #191919;
+}
+
+#subGaleria {
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    justify-self:start;
+    margin-top:200px;
+    margin-left:200px;
+     font-size:50px;
+}
+
+strong {
+    color:var(--ouro);
+}
+
+#pai {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    margin-top:20px;
+    padding:90px;
+   
+}
+
+.filhos {
+    border:1px solid var(--cinza);
+    border-radius:10px;
+    padding:50px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    justify-self:center;
+    margin-top:30px;
+}
+
+.filhos:hover {
+    transform:scale(1.1);
+    transition:0.5s;
+}
+
+.filhos p {
+    color: var(--dourado-escuro)
+}
+
+img {
+    width:400px;
+    height:400px;
+}
+
+/*pagina inicial */
+a{
+  color:inherit;
+  text-decoration: none;
+  
+}
+
+header{
+ min-height: 82px;
+ padding: 0 5.5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 25px;
+border-bottom: 1px solid var(--linha);
+background: var(--preto);
+position: relative;
+z-index: 10;
+}
+
+header h1 {
+  font: 900 29px 'Barlow Condensed', sans-serif;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+header h1 span {
+  color: var(--ouro);
+  padding: 0 5px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1px;
+  color: var(--cinza);
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--ouro);
+}
+
+.nav-reserva {
+  padding: 13px 17px;
+  border: 1px solid var(--ouro);
+  color: var(--ouro);
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-reserva:hover {
+  background: var(--ouro);
+  color: var(--preto);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ouro);
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 650px;
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 35px;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+}
+
+.herói::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 10%;
+  right: -180px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.10),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-frase {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.frase {
+  color: var(--ouro);
+  font: 500 11px 'DM Mono', monospace;
+  letter-spacing: 4px;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+}
+
+.hero-frase h1 {
+  font: 900 clamp(48px, 6vw, 85px)/0.95
+    'Barlow Condensed', sans-serif;
+  letter-spacing: -1.5px;
+  margin-bottom: 25px;
+  max-width: 650px;
+  text-transform: uppercase;
+}
+
+.hero-frase h1 strong {
+  color: var(--ouro);
+  font-weight: 900;
+}
+
+.hero-frase2 {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #BDBDBD;
+  max-width: 390px;
+  margin-bottom: 30px;
+}
+
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.btn-agendar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 17px 21px;
+  background: var(--ouro);
+  color: var(--preto);
+  font: 700 10px 'DM Mono', monospace;
+  letter-spacing: 1px;
+
+}
+
+.btn-agendar:hover {
+  background: var(--branco);
+  transform: translateY(-3px);
+}
+
+.btn-agendar span {
+  font-size: 16px;
+}
+
+.btn-agenda {
+  display: inline-block;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #555555;
+  color: var(--branco);
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease,
+   
+}
+
+.btn-agenda:hover {
+  color: var(--ouro);
+  border-color: var(--ouro);
+}
+
+.tribal-mark {
+  position: absolute;
+  right: 4%;
+  top: 10%;
+  font-size: 72px;
+  color: var(--ouro);
+  text-shadow: 2px 2px var(--branco);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.border-y {
+  border-top: 1px solid var(--linha);
+  border-bottom: 1px solid var(--linha);
+}
+
+.border-gray-800 {
+  border-color: #373737;
+}
+
+.letreiro {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.letreiro span {
+  display: inline-block;
+  margin: 0 32px;
+  font: 900 46px 'Barlow Condensed', sans-serif;
+  letter-spacing: 2px;
+  color: var(--branco);
+  text-transform: uppercase;
+}
+
+
+/*sobre*/
+
+
+#sobre_mim {
+    padding-top: 40px;
+    text-align: center;
+}
+
+#sobre_mim h3 {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#sobre_mim img {
+    border-radius: 70px;
+    border: var(--ouro);
+    width: 400px;
+    height: 400px;
+}
+
+.card {
+    border:3px solid var(--ouro);
+    padding: 20px;
+    width: 1600px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/*fim da pagina inicial*/
+.corpo{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.servicos{
+    padding: 50px 8% 86px;
+}
+
+.topo{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.etiqueta{
+    font-family: 'DM MONO', monospace;
+    font-size: 10px;
+    color: var(--luz-dourada);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.agendamento h2, .agendamento h1{
+    font-family: 'OSWALD',sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.05;
+    
+}
+
+h1 span{
+    color: var(--luz-dourada);
+}
+
+.link-topo,
+.links-footer a{
+    color: var(--branco);
+    text-decoration: none;
+    font-family: 'DM MONO', monospace;
+    font-size: 9px;
+}
+.link-topo{
+    border-bottom: 1px solid #555;
+    padding-bottom: 9px;
+    margin-bottom: 3px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:12px;
+}
+
+.card{
+    min-height: 249px;
+    padding: 25px 22px;
+    border: 1px solid #383838;
+    background: linear-gradient(135deg,#171717,#101010);
+    transition: border-color 0.3s,transform 0.3s;
+}
+
+.card:hover{
+    border-color: var(--ouro);
+    transform: translateY(-4px);
+}
+
+.numero{
+    color: var(--luz-dourada);
+    font-family: 'DM MONO', monospace;
+    font-size: 10px;
+}
+
+.simbolo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    font-size: 48px;
+    color: var(--luz-dourada);
+}
+
+.onda{
+    color: var(--branco);
+    font-size: 65px;
+    transform: rotate(180deg);
+}
+
+.estrela{
+    color: var(--luz-dourada);
+}
+
+.card h2{
+    font-family: 'OSWALD',sans-serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.card p{
+    font-size: 11px;
+    line-height: 1.7;
+    color: var(--cinza);
+    margin-bottom: 19px;
+}
+
+.detalhes{
+    background: none;
+    border: none;
+    background: var(--luz-dourada);
+    color: var(--preto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.clara{
+    color: var(--branco);
+    margin-bottom: 20px;
+}
+
+.agendamento h2{
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.agendamento h2 span{
+    color: var(--branco);
+}
+
+.estrela-fundo{
+    position: absolute;
+    left: 61%;
+    top: 50%;
+   transform: translate(-50%,-50%);
+   color: rgba(255, 255, 255, 0.22);
+   font-size: 125px;
+    
+}
